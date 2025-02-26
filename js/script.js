@@ -2,7 +2,7 @@ const form = document.getElementById("simuladorForm");
 const resultadoDiv = document.getElementById("resultado");
 const productosGuardadosDiv = document.getElementById("productosGuardados");
 
-// Cargar productos guardados en localStorage
+//Cargar productos guardados en localStorage
 window.onload = () => {
     const productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
     if (productosGuardados.length > 0) {
@@ -76,7 +76,7 @@ form.addEventListener("submit", (e) => {
 
     const datos = { nombreProducto, precioProducto, porcentajeDescuento, presupuesto };
 
-    // Obtener los productos existentes y agregar el nuevo producto
+    //Obtener los productos existentes y agregar el nuevo producto
     const productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
     productosGuardados.push(datos);
     localStorage.setItem("productos", JSON.stringify(productosGuardados));
